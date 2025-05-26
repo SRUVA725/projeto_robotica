@@ -94,11 +94,8 @@ Luccas Delgado RA: 2200535
 Pedro Henrique RA: 2202159
 
 Ricardo Mantia RA: 2200292
-...
 
-```bash
-python ev3_maze.py
-```
+---
 
 ## 🧑‍🏫 Orientador
 
