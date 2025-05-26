@@ -41,7 +41,7 @@ O projeto também permite que o robô faça ajustes na trajetória utilizando gi
 
 ---
 
-##📂 Estrutura do Código
+## 📂 Estrutura do Código
 
 ##rotate_sensor_degrees(degrees)##
 Essa função controla o motor responsável pela rotação do sensor ultrassônico. O parâmetro degrees determina o ângulo de rotação, permitindo que o sensor possa medir distâncias à frente, à esquerda ou à direita do robô.
