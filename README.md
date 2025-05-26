@@ -41,27 +41,27 @@ O projeto também permite que o robô faça ajustes na trajetória utilizando gi
 
 ---
 
-## 📂 Estrutura do Código
+##📂 Estrutura do Código
 
-**rotate_sensor_degrees(degrees)**
+##rotate_sensor_degrees(degrees)##
 Essa função controla o motor responsável pela rotação do sensor ultrassônico. O parâmetro degrees determina o ângulo de rotação, permitindo que o sensor possa medir distâncias à frente, à esquerda ou à direita do robô.
-**detect_edge()**
-O sensor de cor verifica a reflexão do solo para determinar se há uma borda. Se a reflexão for menor que um certo limiar, significa que o robô está próximo a uma queda, então ele deve parar. Além disso, a função imprime o valor da reflexão na tela do EV3.
-**move_fwd_cell()**
+##detect_edge()##
+O sensor de cor verifica a reflexão do solo para determinar se há uma borda. Se a reflexão for menor que um certo limiar, significa que o robô está próximo a uma queda, então ele deve parar. Além disso, a função imprime o valor da reflexão na tela do EV3 Brick.
+##move_fwd_cell()##
 Essa função faz o robô avançar uma célula no grid. Antes de se movimentar, ele verifica se há uma borda usando detect_edge(). Se houver, ele para imediatamente. Caso contrário, ele move 150 mm para frente.
-**recallibrate()**
-Se o robô perceber que algo está errado (por exemplo, uma movimentação desalinhada), ele realiza um pequeno recuo seguido de um avanço. Isso ajuda a ajustar a posição do robô para que continue seguindo corretamente o trajeto.
-**turn_left() e turn_right()**
-São funções simples para girar o robô em 90° para a esquerda ou para a direita, respectivamente. Elas ajudam na navegação dentro do grid.
-- avoid_obstacle_with_analysis()**
-Essa função permite ao robô evitar obstáculos de forma inteligente. Ele para o movimento e usa rotate_sensor_degrees() para medir a distância tanto na esquerda quanto na direita. Com base na análise dessas distâncias, decide qual direção seguir e executa a rotação correspondente.
-**continuous_navigation()**
+##recallibrate()##
+Se o robô perceber que está desalinhado, ele realiza um pequeno recuo seguido de um avanço. Isso ajuda a ajustar sua posição para que continue seguindo corretamente o trajeto.
+##turn_left() e turn_right()##
+São funções para girar o robô 90° para a esquerda ou para a direita, respectivamente. Elas ajudam na navegação dentro do grid.
+avoid_obstacle_with_analysis()##
+Essa função permite ao robô evitar obstáculos de forma inteligente. Ele para o movimento e usa rotate_sensor_degrees() para medir a distância à esquerda e à direita. Com base na análise dessas distâncias, decide qual direção seguir e executa a rotação correspondente.
+##continuous_navigation()##
 Essa função principal é responsável pela movimentação contínua do robô. Em um loop infinito, ele:
-  ° Verifica se há bordas usando detect_edge(). Se detectar, ele para e espera.
-  ° Verifica a distância de obstáculos com ultra_sonic.distance(). Se um obstáculo estiver próximo, ele usa avoid_obstacle_with_analysis() para decidir a melhor rota.
-  ° Move para frente caso o caminho esteja livre.
-**main()**
-Essa função inicializa a navegação do robô. Limpa a tela do EV3, imprime a mensagem de início e chama continuous_navigation() para executar o movimento e decisões em tempo real.
+- Verifica bordas usando detect_edge(). Se detectar, ele para e espera.
+- Verifica obstáculos com ultra_sonic.distance(). Se um obstáculo estiver próximo, ele usa avoid_obstacle_with_analysis() para decidir a melhor rota.
+- Move para frente caso o caminho esteja livre.
+##main()##
+Essa função inicializa a navegação do robô. Ela limpa a tela do EV3, imprime a mensagem de início e chama continuous_navigation() para executar o movimento e tomar decisões em tempo real.
 
 ---
 
