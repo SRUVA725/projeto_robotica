@@ -66,7 +66,9 @@ O projeto também permite que o robô faça ajustes na trajetória utilizando gi
 - Essa função permite ao robô evitar obstáculos de forma inteligente. Ele para o movimento e usa rotate_sensor_degrees() para medir a distância à esquerda e à direita. Com base na análise dessas distâncias, decide qual direção seguir e executa a rotação correspondente.
   
 **continuous_navigation()**
+
 Essa função principal é responsável pela movimentação contínua do robô. Em um loop infinito, ele:
+
 - Verifica bordas usando detect_edge(). Se detectar, ele para e espera.
 - Verifica obstáculos com ultra_sonic.distance(). Se um obstáculo estiver próximo, ele usa avoid_obstacle_with_analysis() para decidir a melhor rota.
 - Move para frente caso o caminho esteja livre.
