@@ -1,39 +1,39 @@
-# 🤖 Projeto EV3 - Navegação Autônoma com Sensores
+# 🤖 Projeto EV3 - Navegação Autônoma com Sensores  
 Este projeto utiliza o LEGO Mindstorms EV3 com o sistema ev3dev e a biblioteca pybricks para permitir a navegação autônoma de um robô dentro de um ambiente pré-definido. O robô usa sensores para detectar obstáculos, bordas no chão e ajustar sua rota dinamicamente, garantindo uma movimentação eficiente e precisa.
 
 ---
 
-## 📌 Objetivo
-O robô deve se deslocar de um ponto inicial até um ponto-alvo dentro de um grid, tomando decisões de movimento com base nas leituras dos sensores. Ele precisa evitar obstáculos, recalibrar sua posição caso detecte desalinhamento e navegar de maneira segura sem cair de bordas detectadas pelo sensor de cor.
+## 📌 Objetivo  
+O robô deve se deslocar de um ponto inicial até um ponto-alvo dentro de um grid, tomando decisões de movimento com base nas leituras dos sensores. Ele precisa evitar obstáculos, recalibrar sua posição caso detecte desalinhamento e navegar de maneira segura sem cair de bordas detectadas pelo sensor de cor.  
 O projeto também permite que o robô faça ajustes na trajetória utilizando giroscópio e medições laterais, garantindo que ele consiga escolher a melhor rota caso encontre barreiras inesperadas.
 
 ---
 
 ## 🧠 Funcionalidades
 
-**Movimentação automática e segura**
-- O robô usa o giroscópio para monitorar sua orientação e garantir que ele siga um trajeto estável e preciso.
-- Os motores são controlados pelo código para avançar, girar e recalibrar a posição do robô conforme necessário.
-**Detecção de obstáculos**
-- O sensor ultrassônico mede a distância à frente do robô. Quando detecta um obstáculo próximo, o robô para e decide a melhor rota alternativa, girando para a esquerda ou para a direita.
-**Identificação de bordas e mudanças no solo**
-- O sensor de cor mede a reflexão do chão. Se detectar um valor baixo de reflexão, significa que há uma borda ou mudança no piso, evitando que o robô caia ou se mova para áreas indesejadas.
-**Navegação precisa e correção de trajetória**
-- O giroscópio auxilia na correção de pequenos desvios, garantindo que o robô continue na trajetória planejada sem perder o rumo.
-- Caso o robô perceba que está desalinhado, ele utiliza um pequeno recuo seguido de avanço para se recalibrar.
-**Análise inteligente do caminho**
+**Movimentação automática e segura**  
+- O robô usa o giroscópio para monitorar sua orientação e garantir que ele siga um trajeto estável e preciso.  
+- Os motores são controlados pelo código para avançar, girar e recalibrar a posição do robô conforme necessário.  
+**Detecção de obstáculos**  
+- O sensor ultrassônico mede a distância à frente do robô. Quando detecta um obstáculo próximo, o robô para e decide a melhor rota alternativa, girando para a esquerda ou para a direita.  
+**Identificação de bordas e mudanças no solo**  
+- O sensor de cor mede a reflexão do chão. Se detectar um valor baixo de reflexão, significa que há uma borda ou mudança no piso, evitando que o robô caia ou se mova para áreas indesejadas.  
+**Navegação precisa e correção de trajetória**  
+- O giroscópio auxilia na correção de pequenos desvios, garantindo que o robô continue na trajetória planejada sem perder o rumo.  
+- Caso o robô perceba que está desalinhado, ele utiliza um pequeno recuo seguido de avanço para se recalibrar.  
+**Análise inteligente do caminho**  
 - A combinação do sensor ultrassônico com a rotação do motor permite ao robô medir distâncias laterais antes de escolher a melhor rota para desviar dos obstáculos.
 
 
 ---
 
-## 🛠️ Componentes Utilizados
+## 🛠️ Componentes Utilizados  
 
-**Motores**
-- Motor Esquerdo → Porta D
-- Motor Direito → Porta A
-- Motor do Sensor Ultrassônico → Porta B
-**Sensores**
+**Motores**  
+- Motor Esquerdo → Porta D  
+- Motor Direito → Porta A  
+- Motor do Sensor Ultrassônico → Porta B  
+**Sensores**  
 - Sensor Ultrassônico → Porta S1
 - Sensor Giroscópio → Porta S2
 - Sensor de Cor → Porta S3
