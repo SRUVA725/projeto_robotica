@@ -11,17 +11,17 @@ O projeto também permite que o robô faça ajustes na trajetória utilizando gi
 
 ## 🧠 Funcionalidades
 
-Movimentação automática e segura
+**Movimentação automática e segura**
 - O robô usa o giroscópio para monitorar sua orientação e garantir que ele siga um trajeto estável e preciso.
 - Os motores são controlados pelo código para avançar, girar e recalibrar a posição do robô conforme necessário.
-Detecção de obstáculos
+**Detecção de obstáculos**
 - O sensor ultrassônico mede a distância à frente do robô. Quando detecta um obstáculo próximo, o robô para e decide a melhor rota alternativa, girando para a esquerda ou para a direita.
-Identificação de bordas e mudanças no solo
+**Identificação de bordas e mudanças no solo**
 - O sensor de cor mede a reflexão do chão. Se detectar um valor baixo de reflexão, significa que há uma borda ou mudança no piso, evitando que o robô caia ou se mova para áreas indesejadas.
-Navegação precisa e correção de trajetória
+**Navegação precisa e correção de trajetória**
 - O giroscópio auxilia na correção de pequenos desvios, garantindo que o robô continue na trajetória planejada sem perder o rumo.
 - Caso o robô perceba que está desalinhado, ele utiliza um pequeno recuo seguido de avanço para se recalibrar.
-Análise inteligente do caminho
+**Análise inteligente do caminho**
 - A combinação do sensor ultrassônico com a rotação do motor permite ao robô medir distâncias laterais antes de escolher a melhor rota para desviar dos obstáculos.
 
 
@@ -43,24 +43,24 @@ Análise inteligente do caminho
 
 ## 📂 Estrutura do Código
 
-- rotate_sensor_degrees(degrees)
+**rotate_sensor_degrees(degrees)**
 Essa função controla o motor responsável pela rotação do sensor ultrassônico. O parâmetro degrees determina o ângulo de rotação, permitindo que o sensor possa medir distâncias à frente, à esquerda ou à direita do robô.
-- detect_edge()
+**detect_edge()**
 O sensor de cor verifica a reflexão do solo para determinar se há uma borda. Se a reflexão for menor que um certo limiar, significa que o robô está próximo a uma queda, então ele deve parar. Além disso, a função imprime o valor da reflexão na tela do EV3.
-- move_fwd_cell()
+**move_fwd_cell()**
 Essa função faz o robô avançar uma célula no grid. Antes de se movimentar, ele verifica se há uma borda usando detect_edge(). Se houver, ele para imediatamente. Caso contrário, ele move 150 mm para frente.
-- recallibrate()
+**recallibrate()**
 Se o robô perceber que algo está errado (por exemplo, uma movimentação desalinhada), ele realiza um pequeno recuo seguido de um avanço. Isso ajuda a ajustar a posição do robô para que continue seguindo corretamente o trajeto.
-- turn_left() e turn_right()
+**turn_left() e turn_right()**
 São funções simples para girar o robô em 90° para a esquerda ou para a direita, respectivamente. Elas ajudam na navegação dentro do grid.
-- avoid_obstacle_with_analysis()
+- avoid_obstacle_with_analysis()**
 Essa função permite ao robô evitar obstáculos de forma inteligente. Ele para o movimento e usa rotate_sensor_degrees() para medir a distância tanto na esquerda quanto na direita. Com base na análise dessas distâncias, decide qual direção seguir e executa a rotação correspondente.
-- continuous_navigation()
+**continuous_navigation()**
 Essa função principal é responsável pela movimentação contínua do robô. Em um loop infinito, ele:
   ° Verifica se há bordas usando detect_edge(). Se detectar, ele para e espera.
   ° Verifica a distância de obstáculos com ultra_sonic.distance(). Se um obstáculo estiver próximo, ele usa avoid_obstacle_with_analysis() para decidir a melhor rota.
   ° Move para frente caso o caminho esteja livre.
-- main()
+**main()**
 Essa função inicializa a navegação do robô. Limpa a tela do EV3, imprime a mensagem de início e chama continuous_navigation() para executar o movimento e decisões em tempo real.
 
 ---
