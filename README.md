@@ -89,7 +89,7 @@ Guilherme Gimenez RA: 2100786
 
 Guilherme Torres RA: 2200412
 
-Kauã Duque RA: 
+Kauã Duque RA: 2201177
 
 Luccas Delgado RA: 2200535
 
