@@ -4,29 +4,29 @@ Este projeto utiliza o LEGO Mindstorms EV3 com o sistema ev3dev e a biblioteca p
 ---
 
 ## 📌 Objetivo  
-O robô deve se deslocar de um ponto inicial até um ponto-alvo dentro de um grid, tomando decisões de movimento com base nas leituras dos sensores. Ele precisa evitar obstáculos, recalibrar sua posição caso detecte desalinhamento e navegar de maneira segura sem cair de bordas detectadas pelo sensor de cor.  
-O projeto também permite que o robô faça ajustes na trajetória utilizando giroscópio e medições laterais, garantindo que ele consiga escolher a melhor rota caso encontre barreiras inesperadas.
+O robô deve se deslocar dentro de um grid tomando decisões de movimento com base nas leituras dos sensores, garantindo uma navegação eficiente e segura. Para isso, ele conta com a capacidade de evitar obstáculos utilizando análise lateral, permitindo ajustes automáticos de rota sempre que necessário. Além disso, possui um sistema de recalibração para corrigir possíveis desalinhamentos, garantindo uma trajetória precisa. O seguimento de linha e o controle PID aprimoram a fluidez dos movimentos, tornando as curvas mais suaves e controladas. O display do EV3 exibe informações em tempo real sobre a posição do robô, facilitando o monitoramento da navegação. Por fim, o robô registra e armazena os caminhos percorridos, permitindo o mapeamento de rotas e a otimização dos deslocamentos futuros. 🚀🤖
 
 ---
 
 ## 🧠 Funcionalidades
 
-**Movimentação automática e segura**  
-- O robô usa o giroscópio para monitorar sua orientação e garantir que ele siga um trajeto estável e preciso.  
-- Os motores são controlados pelo código para avançar, girar e recalibrar a posição do robô conforme necessário.
-  
-**Detecção de obstáculos**  
-- O sensor ultrassônico mede a distância à frente do robô. Quando detecta um obstáculo próximo, o robô para e decide a melhor rota alternativa, girando para a esquerda ou para a direita.
-  
-**Identificação de bordas e mudanças no solo**  
-- O sensor de cor mede a reflexão do chão. Se detectar um valor baixo de reflexão, significa que há uma borda ou mudança no piso, evitando que o robô caia ou se mova para áreas indesejadas.
-  
-**Navegação precisa e correção de trajetória**  
-- O giroscópio auxilia na correção de pequenos desvios, garantindo que o robô continue na trajetória planejada sem perder o rumo.  
-- Caso o robô perceba que está desalinhado, ele utiliza um pequeno recuo seguido de avanço para se recalibrar.
-  
-**Análise inteligente do caminho**  
-- A combinação do sensor ultrassônico com a rotação do motor permite ao robô medir distâncias laterais antes de escolher a melhor rota para desviar dos obstáculos.
+**🔹 Movimentação precisa com DriveBase**
+O EV3Brick controla dois motores, garantindo movimentação fluida dentro do grid, utilizando funções de avanço, rotação e recalibração.
+
+**🔹 Detecção de obstáculos e escolha de rota alternativa**
+O sensor ultrassônico mede distâncias e, ao detectar um obstáculo, o robô analisa lateralmente antes de decidir virar à esquerda ou à direita.
+
+**🔹 Seguimento de linha**
+O sensor de cor permite que o robô identifique mudanças no solo e faça ajustes precisos, evitando quedas e movimentos inesperados.
+
+**🔹 Recalibração automática**
+Se o sensor giroscópio detectar desalinhamento, o robô recuará e avançará novamente para corrigir a posição.
+
+**🔹 Visualização gráfica da posição**
+O display do EV3 exibe mensagens com leituras dos sensores, garantindo feedback em tempo real sobre navegação e correções.
+
+**🔹 Mapeamento inteligente do caminho**
+O código armazena rotas percorridas, permitindo ajustes e otimização na movimentação.
 
 
 ---
