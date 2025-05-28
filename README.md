@@ -7,7 +7,7 @@ Este projeto utiliza o LEGO Mindstorms EV3 com o sistema ev3dev e a biblioteca p
 O robô deve se deslocar dentro de um grid tomando decisões de movimento com base nas leituras dos sensores, garantindo uma navegação eficiente e segura. Para isso, ele conta com a capacidade de evitar obstáculos utilizando análise lateral, permitindo ajustes automáticos de rota sempre que necessário. Além disso, possui um sistema de recalibração para corrigir possíveis desalinhamentos, garantindo uma trajetória precisa. O seguimento de linha e o controle PID aprimoram a fluidez dos movimentos, tornando as curvas mais suaves e controladas. O display do EV3 exibe informações em tempo real sobre a posição do robô, facilitando o monitoramento da navegação. Por fim, o robô registra e armazena os caminhos percorridos, permitindo o mapeamento de rotas e a otimização dos deslocamentos futuros. 🚀🤖
 
 ----
-
+          
 ## 🧠 Funcionalidades
 
 **🔹 Movimentação precisa com DriveBase**
